@@ -1,14 +1,45 @@
+import ShutterSpeed from "./ShutterSpeed";
+
+/**
+ *
+ */
 export default class Shutter {
 
-    private readonly shutterSpeed : number;
+    /**
+     *
+     */
+    private shutterSpeed : ShutterSpeed;
 
-    constructor(shutterSpeed: number) {
-        this.shutterSpeed = shutterSpeed;
+    /**
+     *
+     * @param shutterSpeed
+     */
+    constructor(shutterSpeed: ShutterSpeed | number) {
+        this.shutterSpeed = typeof shutterSpeed === "number" ? new ShutterSpeed(shutterSpeed) : shutterSpeed;
     }
 
-
-    public getShutterSpeed() : number {
+    /**
+     *
+     */
+    public getShutterSpeed() : ShutterSpeed {
         return this.shutterSpeed;
     }
+
+    /**
+     *
+     * @param shutterSpeed
+     */
+    public setShutterSpeed(shutterSpeed : number | ShutterSpeed) : void {
+        this.shutterSpeed = typeof shutterSpeed === "number" ? new ShutterSpeed(shutterSpeed) : shutterSpeed
+    }
+
+    /**
+     *
+     * @param ev
+     */
+    public setEvOffset(ev : number) : void {
+
+    }
+
 
 }
