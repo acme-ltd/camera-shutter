@@ -6,10 +6,12 @@
   "typings": "dist/index.d.ts",
   "type": "module",
   "devDependencies": {
+    "@types/jest": "latest",
+    "jest": "latest",
+    "ts-jest": "latest",
     "typescript": "latest"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "license": "MIT",
   "private": false,
   "repository": {
@@ -20,7 +22,7 @@
     "url": "https://github.com/acme-ltd/shutter/issues"
   },
   "scripts": {
-
+    "test": "jest --verbose"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
